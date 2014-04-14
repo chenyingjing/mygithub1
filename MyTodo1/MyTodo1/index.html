@@ -1,0 +1,31 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <script>
+        function todoinputOnKeyPress(e) {
+            var keynum;
+            if (window.event) // IE
+            {
+                keynum = e.keyCode
+            }
+            else if (e.which) // Netscape/Firefox/Opera
+            {
+                keynum = e.which
+            }
+            if (keynum == 13) {//Enter
+                //alert(keynum);
+                var newNode = document.createElement("li");
+                newNode.innerHTML = "okxx";
+                document.getElementById("todolist").appendChild(newNode);
+            }
+        }
+    </script>
+</head>
+<body>
+    <input type="text" name="todoinput" placeholder="What needs to be done?" onkeypress="todoinputOnKeyPress(event)"/>
+    <ul id="todolist">
+    </ul>
+</body>
+</html>

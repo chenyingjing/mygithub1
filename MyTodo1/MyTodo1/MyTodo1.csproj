@@ -43,6 +43,13 @@
   </PropertyGroup>
   <ItemGroup>
     <Content Include="index.html" />
+    <Content Include="js\app.js" />
+    <Content Include="js\collections\todos.js" />
+    <Content Include="js\lib\backbone-min.js" />
+    <Content Include="js\lib\jquery.min.js" />
+    <Content Include="js\lib\underscore-min.js" />
+    <Content Include="js\models\todo.js" />
+    <Content Include="js\views\app.js" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Properties\" />

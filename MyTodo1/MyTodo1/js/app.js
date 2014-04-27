@@ -1,1 +1,3 @@
-﻿new AppView();
+﻿var ENTER_KEY = 13;
+
+new AppView();

@@ -1,14 +1,32 @@
 ﻿AppView = Backbone.View.extend({
-    tagName: 'todolist',
+    events: {
+        'keypress #todoinput': 'createOnEnter',
+    },
+
+    //tagName: 'todolist',
+    el: '#todoapp',
+
+
+
 
     initialize: function () {
+        this.input = this.$('#todoinput');
         Todos.on('add', this.addOne, this);
 
     },
 
     addOne: function (todo) {
-        alert('addOne');
+        $('#todolist').append('<li>' + todo.get("title") + '</li>');
     },
 
-
+    createOnEnter: function (e) {
+        if (e.which !== ENTER_KEY || !this.input.val().trim()) {
+            return;
+        }
+        //app.Todos.create(this.newAttributes());
+        var newInput = this.input.val().trim();
+        this.input.val('');
+        Todos.create({ title: newInput });
+        //this.input.val('');
+    },
 });

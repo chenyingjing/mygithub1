@@ -16,7 +16,7 @@
     },
 
     addOne: function (todo) {
-        $('#todolist').append('<li>' + todo.get("title") + '</li>');
+        $('#todolist').append('<li style="list-style-type:none"><input type="checkbox"/>' + todo.get("title") + '</li>');
     },
 
     createOnEnter: function (e) {
@@ -26,7 +26,7 @@
         //app.Todos.create(this.newAttributes());
         var newInput = this.input.val().trim();
         this.input.val('');
-        Todos.create({ title: newInput });
+        Todos.create({ title: newInput, completed: false });
         //this.input.val('');
     },
 });

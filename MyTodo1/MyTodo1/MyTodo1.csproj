@@ -50,6 +50,7 @@
     <Content Include="js\lib\underscore-min.js" />
     <Content Include="js\models\todo.js" />
     <Content Include="js\views\app.js" />
+    <Content Include="js\views\todos.js" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Properties\" />

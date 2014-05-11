@@ -22,13 +22,19 @@
             }
         }
     </script>
+    <style type="text/css">
+    .completed
+    {
+        text-decoration: line-through;
+    }
+    </style>
 </head>
 <body>
 	<section id="todoapp">
         <!--<input type="text" id="Text1" placeholder="What needs to be done?" onkeypress="todoinputOnKeyPress(event)"/>-->
         <input type="text" id="todoinput" placeholder="What needs to be done?"/>
         <ul id="todolist">
-            <li style="list-style-type:none"><input type="checkbox"/>todo1</li>
+            <li style="list-style-type:none;text-decoration: line-through"><input  type="checkbox" checked="checked" />todo1</li>
         </ul>
 	</section>
 	<script src="js/lib/jquery.min.js"></script>
@@ -36,6 +42,7 @@
 	<script src="js/lib/backbone-min.js"></script>
 	<script src="js/models/todo.js"></script>
 	<script src="js/collections/todos.js"></script>
+	<script src="js/views/todos.js"></script>
 	<script src="js/views/app.js"></script>
 	<script src="js/app.js"></script>
 </body>

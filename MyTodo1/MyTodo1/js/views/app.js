@@ -16,7 +16,8 @@
     },
 
     addOne: function (todo) {
-        $('#todolist').append('<li style="list-style-type:none"><input type="checkbox"/>' + todo.get("title") + '</li>');
+        var view = new TodoView({ model: todo });
+        $('#todolist').append(view.render().el);
     },
 
     createOnEnter: function (e) {
